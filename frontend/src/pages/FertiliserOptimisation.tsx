@@ -6,7 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-import { useLocation } from "@/contexts/LocationContext";
+import { useLocation } from "@/pages/LocationContext";
 import { 
   Leaf, 
   Beaker, 

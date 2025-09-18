@@ -11,7 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress";
 import Header from "@/components/Layout/Header";
 import { useToast } from "@/hooks/use-toast";
-import { useLocation } from "@/contexts/LocationContext";
+import { useLocation } from "@/pages/LocationContext";
 import { locationData, parseLocation } from "@/data/locations";
 import { MapPin, User, TreePine, Settings, Check, ChevronsUpDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";

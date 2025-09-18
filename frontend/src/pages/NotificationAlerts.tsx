@@ -6,7 +6,7 @@ import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-import { useLocation } from "@/contexts/LocationContext";
+import { useLocation } from "@/pages/LocationContext";
 import { Bell, Cloud, Droplets, AlertTriangle, Info, MapPin, Settings } from "lucide-react";
 
 interface AlertNotification {
@@ -53,7 +53,7 @@ const NotificationAlerts = () => {
       setLoading(true);
       setError("");
       try {
-        const response = await fetch("http://127.0.0.1:5000/api/alerts", {
+        const response = await fetch("http://127.0.0.1:8000/api/alerts", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { LocationProvider } from "./contexts/LocationContext";
+import { LocationProvider } from "./pages/LocationContext";
 
 import Login from "./pages/Login";
 import ProfileSetup from "./pages/ProfileSetup";
@@ -28,6 +28,7 @@ import PesticideVerification from "./pages/PesticideVerification";
 import ByproductUtilization from "./pages/ByproductUtilization";
 import BlockchainTraceability from "./pages/BlockchainTraceability";
 import FarmerSupport from "./pages/FarmerSupport";
+import Community from "./pages/Community"; // <-- Added Community page
 
 const queryClient = new QueryClient();
 
@@ -48,160 +49,170 @@ const App = () => (
             <Route path="/" element={<Navigate to="/login" replace />} />
             <Route path="/login" element={<Login />} />
 
-            <Route 
-              path="/profile-setup" 
+            <Route
+              path="/profile-setup"
               element={
                 <ProtectedRoute>
                   <ProfileSetup />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/dashboard" 
+            <Route
+              path="/dashboard"
               element={
                 <ProtectedRoute>
                   <Dashboard />
                 </ProtectedRoute>
-              } 
+              }
             />
 
-            <Route 
-              path="/market-analysis" 
+            <Route
+              path="/market-analysis"
               element={
                 <ProtectedRoute>
                   <MarketAnalysis />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/crop-suitability" 
+            <Route
+              path="/crop-suitability"
               element={
                 <ProtectedRoute>
                   <CropSuitability />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/crop-advisor" 
+            <Route
+              path="/crop-advisor"
               element={
                 <ProtectedRoute>
                   <CropAdvisor />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/infrastructure" 
+            <Route
+              path="/infrastructure"
               element={
                 <ProtectedRoute>
                   <Infrastructure />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/water-monitor" 
+            <Route
+              path="/water-monitor"
               element={
                 <ProtectedRoute>
                   <WaterFootprint />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/weather" 
+            <Route
+              path="/weather"
               element={
                 <ProtectedRoute>
                   <Weather />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/government-schemes" 
+            <Route
+              path="/government-schemes"
               element={
                 <ProtectedRoute>
                   <GovernmentSchemes />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/profile" 
+            <Route
+              path="/profile"
               element={
                 <ProtectedRoute>
                   <Profile />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/location-selector" 
+            <Route
+              path="/location-selector"
               element={
                 <ProtectedRoute>
                   <LocationSelector />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/yield-predictor" 
+            <Route
+              path="/yield-predictor"
               element={
                 <ProtectedRoute>
                   <YieldPredictor />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/notification-alerts" 
+            <Route
+              path="/notification-alerts"
               element={
                 <ProtectedRoute>
                   <NotificationAlerts />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/fertiliser-optimisation" 
+            <Route
+              path="/fertiliser-optimisation"
               element={
                 <ProtectedRoute>
                   <FertiliserOptimisation />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/help" 
+            <Route
+              path="/help"
               element={
                 <ProtectedRoute>
                   <Help />
                 </ProtectedRoute>
-              } 
+              }
             />
 
             {/* New Key Feature Pages */}
-            <Route 
-              path="/pesticide-verification" 
+            <Route
+              path="/pesticide-verification"
               element={
                 <ProtectedRoute>
                   <PesticideVerification />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/byproduct-utilization" 
+            <Route
+              path="/byproduct-utilization"
               element={
                 <ProtectedRoute>
                   <ByproductUtilization />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/blockchain-traceability" 
+            <Route
+              path="/blockchain-traceability"
               element={
                 <ProtectedRoute>
                   <BlockchainTraceability />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/farmer-support" 
+            <Route
+              path="/farmer-support"
               element={
                 <ProtectedRoute>
                   <FarmerSupport />
                 </ProtectedRoute>
-              } 
+              }
+            />
+
+            {/* Community Page */}
+            <Route
+              path="/community"
+              element={
+                <ProtectedRoute>
+                  <Community />
+                </ProtectedRoute>
+              }
             />
 
             {/* Catch-all route */}

@@ -1,0 +1,60 @@
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Virtual environments
+venv/
+.env/
+env/
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+
+# Environment
+.env
+
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+*.egg-info/
+dist/
+
+# Environment & secrets
+.env
+
+# Data files (keep only if needed)
+*.csv
+*.pkl
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+

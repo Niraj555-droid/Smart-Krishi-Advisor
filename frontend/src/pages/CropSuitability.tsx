@@ -31,7 +31,15 @@ interface CropSuitability {
 }
 
 const CropSuitability = () => {
-  const [userProfile, setUserProfile] = useState<any>(null);
+  interface UserProfile {
+    village: string;
+    district: string;
+    state: string;
+    soilType: string;
+    farmSize: number;
+  }
+
+  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [searchCrop, setSearchCrop] = useState("");
   const [selectedCrop, setSelectedCrop] = useState<CropSuitability | null>(null);
 

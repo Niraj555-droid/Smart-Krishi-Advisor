@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-import { useLocation } from "@/contexts/LocationContext";
+import { useLocation } from "@/pages/LocationContext";
 import { 
   TrendingUp, 
   Thermometer, 

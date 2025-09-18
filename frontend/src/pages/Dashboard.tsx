@@ -14,7 +14,8 @@ import {
   BarChart3,
   Building2,
   Thermometer,
-  ArrowRight
+  ArrowRight,
+  Users
 } from "lucide-react";
 
 interface UserProfile {
@@ -75,6 +76,13 @@ const Dashboard = () => {
       color: "bg-gradient-to-r from-blue-500 to-blue-600"
     },
     {
+      title: "Community",
+      description: "Connect with farmers & share experiences",
+      icon: Users,
+      path: "/community",
+      color: "bg-gradient-to-r from-orange-500 to-orange-600"
+    },
+    {
       title: "Water Monitor",
       description: "Track water usage & conservation",
       icon: Droplets,
@@ -92,9 +100,9 @@ const Dashboard = () => {
 
   // AI Crop Recommendations
   const recommendedCrops = [
-    { name: "Wheat", suitability: 53, price: "₹12,000", market: "Adimali" },
-    { name: "Rice", suitability: 20, price: "₹14,000", market: "Tumkur" },
-    { name: "Maize", suitability: 7, price: "₹18,000", market: "Durg" }
+    { name: "Orange", suitability: 53, price: "₹12,000", market: "Adimali" },
+    { name: "Coconut", suitability: 20, price: "₹14,000", market: "Tumkur" },
+    { name: "Pomegranate", suitability: 7, price: "₹18,000", market: "Durg" }
   ];
 
   const topCrop = recommendedCrops[0];
@@ -151,6 +159,27 @@ const Dashboard = () => {
           <p className="text-muted-foreground mb-3">
             {getRoleTitle(userProfile.role)} • {userProfile.farmSize} acres
           </p>
+
+          {/* Recommended Crop Header */}
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-lg font-semibold text-primary">
+                  Recommended Crop: {topCrop.name} ({topCrop.suitability}%)
+                </h2>
+                <p className="text-sm text-muted-foreground">
+                  Optimal for your farm conditions
+                </p>
+              </div>
+              <Button 
+                variant="secondary" 
+                size="sm"
+                onClick={() => navigate("/crop-advisor")}
+              >
+                View Details
+              </Button>
+            </div>
+          </div>
         </div>
 
         {/* Quick Insights */}
@@ -307,8 +336,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        
-        {/* Key Features Section (New Section) */}
+        {/* Key Features Section */}
         <div className="mb-8">
           <h2 className="text-xl font-heading font-semibold mb-4">🌟 Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -393,10 +421,9 @@ const Dashboard = () => {
             </Card>
           </div>
         </div>
-      </main>
 
         {/* Additional Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="shadow-card">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
@@ -465,7 +492,7 @@ const Dashboard = () => {
             </CardContent>
           </Card>
         </div>
-
+      </main>
       
       <Footer />
     </div>

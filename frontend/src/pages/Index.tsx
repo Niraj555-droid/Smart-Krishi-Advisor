@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-import { useLocation } from "@/contexts/LocationContext";
+import { useLocation } from "@/pages/LocationContext";
 import { 
   Wheat, 
   TrendingUp, 

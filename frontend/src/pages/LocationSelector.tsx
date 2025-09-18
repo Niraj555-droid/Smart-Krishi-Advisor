@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { locationData, parseLocation } from "@/data/locations";
-import { useLocation } from "@/contexts/LocationContext";
+import { useLocation } from "@/pages/LocationContext";
 import { MapPin, Check, ChevronsUpDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -40,7 +40,7 @@ const LocationSelector = () => {
 
     // Call backend API for alerts
     try {
-      const response = await fetch("http://localhost:5000/api/alerts", {
+      const response = await fetch("http://localhost:8000/api/alerts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

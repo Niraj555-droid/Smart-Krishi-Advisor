@@ -67,7 +67,7 @@ const CropAdvisor: React.FC = () => {
 
     try {
       // Fetch soil + crop data
-      const resLocation = await fetch("http://127.0.0.1:5000/location-info", {
+      const resLocation = await fetch("http://127.0.0.1:8000/location-info", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ location: loc.trim().toLowerCase() }),
@@ -88,7 +88,7 @@ const CropAdvisor: React.FC = () => {
       setMarketData(Object.fromEntries(marketEntries));
 
       // Fetch real-time alerts
-      const resAlerts = await fetch("http://127.0.0.1:5000/api/alerts", {
+      const resAlerts = await fetch("http://127.0.0.1:8000/api/alerts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ location: loc.trim().toLowerCase(), sms: false }),
